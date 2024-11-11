@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Piccioni</title>
+<style>
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+</head>
+<body>
+
+<h1>PICCIONI</h1>
+
+<div class="container">
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="piccione.gif" alt="Foto 1">
+      </div>
+      <div class="flip-card-back">
+        <h1>Classificazione tassonomica</h1>
+        <p>Il piccione comune, <b>Columba livia</b>, appartiene al Regno <b>Animalia</b>, Phylum <b>Chordata</b>, Classe <b>Aves</b>, Ordine <b>Columbiformes</b>, Famiglia <b>Columbidae</b>, e al Genere <b>Columba</b>.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="piccione2.jpg" alt="Foto 2">
+      </div>
+      <div class="flip-card-back">
+        <h1>Descrizione</h1>
+        <p>Il <i>piccione comune</i> (*Columba livia*), noto anche come <b>colombo di città</b>, è un uccello della famiglia dei <i>Columbidi</i>, diffuso in tutto il mondo. Ha un piumaggio grigio-bluastro con riflessi verdi e viola sul collo, e striature scure sulle ali. Adattato alla vita urbana, costruisce i nidi su edifici e strutture elevate, e si nutre di cibo facilmente reperibile nelle città.<p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="piccione3.jpg" alt="Foto 3">
+      </div>
+      <div class="flip-card-back">
+        <h1>Curiosità</h1>
+        <ul>
+            <li>I piccioni hanno un senso dell'orientamento eccezionale, ritrovando il nido anche da grandi distanze; per secoli sono stati usati come “piccioni viaggiatori”.</li>
+            <li>Hanno una memoria visiva sviluppata e riconoscono volti umani, distinguendo amici da estranei.</li>
+            <li>Adattati alla vita urbana, trovano facilmente rifugi e cibo nelle città di tutto il mondo.</li>
+          </ul>                   
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
